@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/v1/")
+@RequestMapping("tester/api/v1/")
 public class TestControl {
 @Autowired
 TestService testService;
@@ -21,6 +21,8 @@ public ResponseEntity<String> addTestData(@RequestBody TestClass testClass){
     System.out.println("test");
     return new ResponseEntity<>(testService.testAddData(testClass), HttpStatus.CREATED);
 }
+
+
 
 @GetMapping("add1")
 public String addTestData(){
